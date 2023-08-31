@@ -315,7 +315,5 @@ func main() {
 
 fallthrough force the execution of the flow
 
-so the next case blocks will also print
-
 
 
