@@ -315,5 +315,93 @@ func main() {
 
 fallthrough force the execution of the flow
 
+so the next case blocks will also print
 
+
+# ARRAYS #
+
+
+
+
+elements stored at particular areas of memory
+
+same data type
+
+array declaration
+
+var array name size of the array data type
+
+example:
+
+var grades [5] int
+
+Array Initialization
+
+ex;
+
+var grades [3]int = [3]int{10, 20, 30]}
+
+
+we can use shorthand declaration as well
+
+grades := [3]int{10, 20, 30}
+
+you can also use elipses [...]
+
+the compiler will calculate size in this case.
+
+
+len()
+
+the length of the array
+
+indexes in arrays
+
+they start with 0 and ends with len-1
+
+90 86 76 42 95
+
+grades[1] => 86
+
+
+you can change the element at the index
+
+grades[1] = 100
+
+
+LOOP through and array:
+
+for i := 0; i < len(grades): i++ {
+    fmt.Println(grades[i])
+    
+    }
+    
+    
+we can also use the range
+
+used for arrays and slices
+
+ex:
+
+for index, element := range grades { 
+    fmt.Println(index, "=>", element)
+    
+}
+
+
+multidimensional array
+
+2d array example
+
+
+0 2 4
+
+1 4 16
+
+2 8 64
+
+
+to go to the second element in the 3rd index type:
+
+arr[2]
 
