@@ -403,5 +403,177 @@ multidimensional array
 
 to go to the second element in the 3rd index type:
 
-arr[2]
+arr[2][1] => 64
+
+# SLICES #
+
+
+continous segments of underlying array
+
+3 components 
+
+pointer, length and capacity
+
+pointer points to the first element in memory
+
+capacity is the length from the first element in the slice to the end of the array
+
+functions:
+
+len()
+cap()
+
+slice example
+
+grades := []int{10,20,30}
+
+
+package main
+import "fmt"
+
+func main() {
+		slice := []int{10, 20, 30}
+		fmt.Println(slice)
+		
+		
+}
+
+you can declare a slice from a slice as well
+
+you can also declare a slice through the make parameter
+
+you can create an empty slice
+
+
+package main
+import "fmt"
+
+func main() {
+
+	slice := make{[]int, 5, 8)
+	fmt.Println(slice)
+	fmt.Println(len(slice))
+	fmt.Println(cap(slice))
+	
+}
+
+capacity of array is equal to length of array
+
+but capacity of slice is equal to length of slice, i.e. where it starts in the array to the end of the array
+
+
+if you change an elemete in the slice then it changes the array as well because it is a pointer
+
+
+You can append an element to a slice
+
+func append (s []T, vs ....T) []T
+
+when needing more space for a new slice a the cap will be doubled and a new array will be created
+
+
+you can append a slice to another slice
+
+slice = append(slice, anotherSlice...)
+
+
+copy elements from slices
+
+func copy(dst, src []Type) int
+
+
+package main
+import "fmt"
+
+func main() {
+
+	src_slice := []int{10, 20, 30, 40, 50}
+	dest_slice := make([]int, 3)
+	
+	num := copy(dest_slice, src_slice)
+	fmt.Println(dest_slice)
+	fmt.Println("Number of elements copied: ", num)
+	
+}
+
+
+looping through a slice
+
+
+# Maps #
+
+unordered collection of key/value pairs
+
+impletemented by hash tables
+
+
+they are efficient and fast
+
+var map_name map[keydata type] vaue data type
+
+
+var my_map map[string]int
+
+
+you cannot add a key value pair in a nil map
+
+example of declaring and initializing a map
+
+code := map[string]string{"en": "English, "fr": "French"}
+
+you can also declare and initialize a map using the make() function
+
+
+you can also reference items in a map by its index
+
+inside the square brackets specify the name of the key
+
+fmt.Println(codes["en"])
+
+
+
+
+when you index a map you get two values
+
+value and also a boolean if found then found
+
+
+delete(map, key_name)
+
+truncate a map
+
+
+delete one by one
+
+or
+
+re-initialize with an empty map
+
+
+# Using Functions #
+
+Functions syntax
+
+
+func name params return type
+
+also known as a method
+
+
+
+Function Return types
+
+
+
+func operation(a int, b int) (int, int) 
+
+the last part is what it returns
+
+
+
+VARIADIC FUNCTIONS
+
+
+'_' blank identifier
+
 
